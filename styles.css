@@ -1,2 +1,80 @@
+body {
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
 
-/* Your CSS Code here. */
+    .container {
+      width: 600px;
+      background-color: rgb(41, 0, 0);
+      border: 5px solid rgb(4, 255, 4);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row {
+      display: flex;
+      border: 5px solid rgb(255, 188, 188);
+      height: 200px;
+    }
+
+    .col {
+      border: 2px dotted rgb(38, 38, 43);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Row 1 specific column colors */
+    .row1 .col1 { background-color: teal; }
+    .row1 .col2 { background-color: thistle; color: black; }
+
+    /* Row 2 specific column colors */
+    .row2 .col1 { background-color: tomato; }
+    .row2 .col2 { background-color: turquoise; color: black; }
+
+    /* Row 3 specific column colors */
+    .row3 {
+      justify-content: center;
+    }
+    .row3 .col1 { background-color: violet; color: black; }
+    .row3 .col2 { background-color: yellowgreen; color: black; }
+
+    /* Medium & up: 768px+ */
+    @media (min-width: 768px) {
+      .row1 .col1 {
+        width: 33.33%;
+      }
+      .row1 .col2 {
+        width: 66.66%;
+      }
+
+      .row2 .col1 {
+        width: 33.33%;
+        margin-left: 33.33%; /* offset by 2 columns (2 x 16.66%) */
+      }
+      .row2 .col2 {
+        width: 33.33%;
+      }
+
+      .row3 .col1,
+      .row3 .col2 {
+        width: 33.33%;
+      }
+    }
+
+    /* Small screens: < 768px */
+    @media (max-width: 767px) {
+      .row1 .col1,
+      .row1 .col2,
+      .row2 .col1,
+      .row2 .col2,
+      .row3 .col1,
+      .row3 .col2 {
+        width: 50%;
+      }
+    }
