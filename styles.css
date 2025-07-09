@@ -18,6 +18,7 @@ body {
       display: flex;
       border: 5px solid rgb(255, 188, 188);
       height: 200px;
+      flex-wrap: wrap;
     }
 
     .col {
@@ -29,52 +30,48 @@ body {
       font-weight: bold;
     }
 
-    /* Row 1 specific column colors */
-    .row1 .col1 { background-color: teal; }
-    .row1 .col2 { background-color: thistle; color: black; }
+    /* Specific colors */
+    .r1c1 { background-color: teal; }
+    .r1c2 { background-color: thistle; color: black; }
 
-    /* Row 2 specific column colors */
-    .row2 .col1 { background-color: tomato; }
-    .row2 .col2 { background-color: turquoise; color: black; }
+    .r2c1 { background-color: tomato; }
+    .r2c2 { background-color: turquoise; color: black; }
 
-    /* Row 3 specific column colors */
+    .r3c1 { background-color: violet; color: black; }
+    .r3c2 { background-color: yellowgreen; color: black; }
+
+    /* Row 3 Centering */
     .row3 {
       justify-content: center;
     }
-    .row3 .col1 { background-color: violet; color: black; }
-    .row3 .col2 { background-color: yellowgreen; color: black; }
 
-    /* Medium & up: 768px+ */
+    /* Medium screens */
     @media (min-width: 768px) {
-      .row1 .col1 {
-        width: 33.33%;
-      }
-      .row1 .col2 {
-        width: 66.66%;
-      }
+      .r1c1 { width: 33.33%; }
+      .r1c2 { width: 66.66%; }
 
-      .row2 .col1 {
+      .r2c1 {
         width: 33.33%;
-        margin-left: 33.33%; /* offset by 2 columns (2 x 16.66%) */
+        margin-left: 16.66%; /* offset by 2 columns = 2 * 16.66% */
       }
-      .row2 .col2 {
+      .r2c2 {
         width: 33.33%;
       }
 
-      .row3 .col1,
-      .row3 .col2 {
+      .r3c1,
+      .r3c2 {
         width: 33.33%;
       }
     }
 
-    /* Small screens: < 768px */
+    /* Small screens */
     @media (max-width: 767px) {
-      .row1 .col1,
-      .row1 .col2,
-      .row2 .col1,
-      .row2 .col2,
-      .row3 .col1,
-      .row3 .col2 {
+      .r1c1,
+      .r1c2,
+      .r2c1,
+      .r2c2,
+      .r3c1,
+      .r3c2 {
         width: 50%;
       }
     }
